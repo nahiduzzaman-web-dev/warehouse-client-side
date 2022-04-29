@@ -1,0 +1,16 @@
+.accordion-button {
+    color: #0faf97d5 !important;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.accordion-button:focus {
+    box-shadow: none !important;
+
+}
+
+.question {
+    margin-left: 8px;
+    font-size: 20px;
+    color: red;
+}
