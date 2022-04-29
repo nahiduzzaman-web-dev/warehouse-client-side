@@ -1,0 +1,22 @@
+.register {
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-btn {
+    background-color: #0faf97;
+    padding: 8px 20px;
+    border-radius: 50px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.register-btn:focus {
+    box-shadow: none;
+}
+
+.register-btn:hover {
+    background-color: lightblue;
+    color: #fff;
+}

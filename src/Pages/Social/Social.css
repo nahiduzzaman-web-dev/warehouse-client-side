@@ -1,0 +1,12 @@
+.google {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+}
+
+.google:hover {
+    background-color: lightblue;
+}

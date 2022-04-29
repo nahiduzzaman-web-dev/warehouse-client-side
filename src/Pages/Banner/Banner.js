@@ -4,6 +4,8 @@ import bannerPic from '../../images/banner/banner-min.jpg';
 import bannerPicTwo from '../../images/banner/banner-2-min.jpg';
 import bannerPicThree from '../../images/banner/banner-3-min.jpg';
 import bannerPicFour from '../../images/banner/banner-4-min.jpg';
+import Register from '../Register/Register';
+import './Banner.css';
 
 const Banner = () => {
     return (
@@ -18,6 +20,12 @@ const Banner = () => {
                                     src={bannerPic}
                                     alt="First slide"
                                 />
+                                <Carousel.Caption>
+                                    <div className='slider-title'>
+                                        <h3>First slide label</h3>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    </div>
+                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -25,6 +33,12 @@ const Banner = () => {
                                     src={bannerPicTwo}
                                     alt="Second slide"
                                 />
+                                <Carousel.Caption>
+                                    <div className='slider-title'>
+                                        <h3>First slide label</h3>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    </div>
+                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -32,6 +46,12 @@ const Banner = () => {
                                     src={bannerPicThree}
                                     alt="Third slide"
                                 />
+                                <Carousel.Caption>
+                                    <div className='slider-title'>
+                                        <h3>First slide label</h3>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    </div>
+                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -39,6 +59,12 @@ const Banner = () => {
                                     src={bannerPicFour}
                                     alt="Third slide"
                                 />
+                                <Carousel.Caption>
+                                    <div className='slider-title'>
+                                        <h3>First slide label</h3>
+                                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                                    </div>
+                                </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
                     </div>
@@ -46,7 +72,7 @@ const Banner = () => {
                 </div>
 
                 <div className="col-md-6 col-12">
-                    <div>
+                    <div className='quote-section'>
                         <div>
                             <h2>REQUEST A QUICK QUOTE</h2>
                             <p>
@@ -54,7 +80,7 @@ const Banner = () => {
                                 This is Clason Warehouse. So You should quick qoute to enter.
 
                             </p>
-
+                            <Register></Register>
                         </div>
                     </div>
                 </div>
