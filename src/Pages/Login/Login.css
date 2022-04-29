@@ -1,13 +1,8 @@
-.form-control:focus {
-    box-shadow: none !important;
+.login-btn:focus {
+    box-shadow: none;
 }
 
-.quote {
-    text-decoration: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.quote-section .quote-btn {
+.login-btn {
     background-color: #0faf97;
     color: #ffffff;
     padding: 8px 20px;
@@ -17,12 +12,20 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.quote-section .quote-btn:focus {
-    box-shadow: none;
-}
-
-.quote-section .quote-btn:hover {
+.login-btn:hover {
     background-color: #ffffff;
     color: #0faf97d5;
 
+}
+
+.login-title {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.forget {
+    cursor: pointer;
+}
+
+.forget:hover {
+    font-weight: bold;
 }

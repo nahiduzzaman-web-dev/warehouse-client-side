@@ -13,7 +13,7 @@ const Register = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+    let from = location.state?.from?.pathname || "/inventory";
 
     const [
         createUserWithEmailAndPassword,
@@ -84,14 +84,14 @@ const Register = () => {
 
                 </div>
 
-                <div className='mb-3 d-flex justify-content-end'>
-                    <input type="submit" value="QUOTE" className="btn btn-block register-btn" />
+                <div className='mb-3 d-flex justify-content-end quote-section'>
+                    <input type="submit" value="QUOTE" className="btn btn-block quote-btn" />
                 </div>
 
             </form>
             <div className='d-flex justify-content-end'>
                 <div>
-                    <p>Already have an account ? <Link to='/login' onClick={navigateLogin} className='register'>Please Login</Link></p>
+                    <p>Already have an account ? <Link to='/login' onClick={navigateLogin} className='quote'>Please Login</Link></p>
 
                     <span className="d-block text-left my-4 text-muted text-end">&mdash; or Register with &mdash;</span>
                 </div>
