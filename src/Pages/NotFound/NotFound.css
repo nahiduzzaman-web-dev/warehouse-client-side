@@ -1,0 +1,19 @@
+.go {
+    font-family: "Fontdiner Swanky", cursive;
+    font-size: 1rem;
+    color: #383838;
+    border-radius: 50px;
+    border: none;
+    background-color: #0faf97d5;
+    padding: 1rem 2.5rem;
+    transition: all 0.1s ease;
+}
+
+.go:hover {
+    background-color: #c5dc50;
+    transform: scale(1.15);
+}
+
+.notfound-pic img {
+    height: 350px;
+}
