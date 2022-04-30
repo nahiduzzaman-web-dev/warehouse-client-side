@@ -7,6 +7,7 @@ import bannerPicFour from '../../images/banner/banner-4.jpg';
 import bannerPicFive from '../../images/banner/banner-5.jpg';
 import Register from '../Register/Register';
 import './Banner.css';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -82,7 +83,15 @@ const Banner = () => {
                             </Carousel.Item>
                         </Carousel>
                     </div>
-
+                    <div className='mt-5'>
+                        <p>
+                            Store easily your medicine. So don't be late to QUOTE and store your Medicine. So please
+                            go to right side in this page and fill that form and you will be registered easily.
+                        </p>
+                        <button className='be-quote'>
+                            <Link to='/inventory'>Why be you Quote</Link>
+                        </button>
+                    </div>
                 </div>
 
                 <div className="col-md-6 col-12">

@@ -23,3 +23,13 @@
     background-color: lightskyblue;
     padding: 20px;
 }
+
+.be-quote {
+    border: none;
+    padding: 10px 20px;
+
+}
+
+.be-quote Link {
+    text-decoration: none;
+}
