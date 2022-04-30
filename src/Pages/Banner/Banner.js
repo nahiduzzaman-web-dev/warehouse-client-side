@@ -8,6 +8,7 @@ import bannerPicFive from '../../images/banner/banner-5.jpg';
 import Register from '../Register/Register';
 import './Banner.css';
 import { Link } from 'react-router-dom';
+import { TiLocationArrow } from 'react-icons/ti';
 
 const Banner = () => {
     return (
@@ -89,7 +90,7 @@ const Banner = () => {
                             go to right side in this page and fill that form and you will be registered easily.
                         </p>
                         <button className='be-quote'>
-                            <Link to='/inventory'>Why be you Quote</Link>
+                            <Link to='/inventory'>Why be you Quote <TiLocationArrow className='fs-4' /></Link>
                         </button>
                     </div>
                 </div>

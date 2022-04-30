@@ -26,10 +26,20 @@
 
 .be-quote {
     border: none;
+    border-radius: 50px;
     padding: 10px 20px;
+}
+
+.be-quote:hover {
+    background-color: #0faf97d5;
 
 }
 
-.be-quote Link {
+.be-quote a {
     text-decoration: none;
+    padding: 10px 20px;
+}
+
+.be-quote a:hover {
+    color: #ffffff;
 }

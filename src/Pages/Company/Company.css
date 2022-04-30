@@ -1,0 +1,40 @@
+.company-list {
+    display: grid;
+    grid-template-columns: 4fr;
+}
+
+.company-name {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.card-design {
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.card-design:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .company-list {
+        grid-template-columns: 1fr;
+    }
+
+    .company-name {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    .company-list {
+        grid-template-columns: 2fr;
+    }
+
+    .company-name {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
