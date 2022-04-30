@@ -7,6 +7,7 @@ import Banner from './Pages/Banner/Banner';
 import Inventory from './Pages/Inventory/Inventory';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
+import Footer from './Pages/Footer/Footer';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
 
 
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }
