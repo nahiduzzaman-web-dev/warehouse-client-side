@@ -1,0 +1,56 @@
+[
+    {
+        "_id": "1",
+        "medicine_name": "Symbion Maxhaler",
+        "supplier_name": "Beximco",
+        "price": 750,
+        "quantity": 350,
+        "picture": "https://beximco-pharma.com/cdn/bpl/product/img/symbion-maxhaler-1.jpg",
+        "sort_description": "Symbion F Maxhaler® is a Multi dose Dry Powder Inhaler, combination of Formoterol Fumarate Dihydrate BP and Budesonide BP. Formoterol Fumarate is a selective, long acting β2 agonist used in the treatment of asthma and other forms of diffuse airways obstruction."
+    },
+    {
+        "_id": "2",
+        "medicine_name": "Avost Plus",
+        "supplier_name": "IBN SINA",
+        "price": 1050,
+        "quantity": 300,
+        "picture": "http://www.ibnsinapharma.com/files/brand/photos/othumb_avost.jpg",
+        "sort_description": "Travoprost Eye Drops is indicated for the reduction of elevated intraocular pressure in patients with open-angle glaucoma or ocular hypertension who are intolerant of or insufficiently responsive to another intraocular pressure lowering medication, as monotherapy or as adjunctive therapy."
+    },
+    {
+        "_id": "3",
+        "medicine_name": "Amodis 500 IV",
+        "supplier_name": "Square",
+        "price": 2005,
+        "quantity": 330,
+        "picture": "http://www.squarepharma.com.bd/products/Amodis-infusion_l.jpg",
+        "sort_description": "Amodis 500 IV should be infused intravenously at an approximate rate of 5 ml/min. Oral medication should be substituted as soon as feasible. Treatment for 7 days should be satisfactory for most patients, but the physician might decide to prolong treatment."
+    },
+    {
+        "_id": "4",
+        "medicine_name": "Dothiepin hcl tablets",
+        "supplier_name": "Acme",
+        "price": 1055,
+        "quantity": 250,
+        "picture": "https://i0.wp.com/tajgenerics.com/wp-content/uploads/Dosulepin-hydrochloride-tablets-scaled.jpg?fit=960%2C640&ssl=1",
+        "sort_description": "Dothiepin belongs to a class of medications known as Tricyclic antidepressants (TCAs). It is used to treat symptoms of depression (low mood) such as: Feeling sad. Feeling hopeless or worthless."
+    },
+    {
+        "_id": "5",
+        "medicine_name": "Remcor",
+        "supplier_name": "ACI Limited",
+        "price": 1502,
+        "quantity": 500,
+        "picture": "https://www.acipharma.net/assets/images/products/remcor.png",
+        "sort_description": "Remcor is the preparation of Remdesivir which is a prodrug that metabolizes into its active form GS-441524. An adenosine nucleotide analog, GS-441524 interferes with the action of viral RNA-dependent RNA polymerase and evades proofreading by viral exoribonuclease (ExoN), causing a decrease in viral RNA production."
+    },
+    {
+        "_id": "6",
+        "medicine_name": "Amboten",
+        "supplier_name": "SK+F",
+        "price": 1020,
+        "quantity": 150,
+        "picture": "https://www.skfbd.com/uploads/medicine/details_thumb/61e82877d9cbb.20220119.png",
+        "sort_description": "Amboten is a preparation of ambroxol hydrochloride. Ambroxol has secretomotor with secretolytic effects. Actually if there any problem related to kidney & liver, consolution with the prescriber is needed."
+    }
+]

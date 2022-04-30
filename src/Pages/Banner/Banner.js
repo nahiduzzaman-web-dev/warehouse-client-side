@@ -23,12 +23,6 @@ const Banner = () => {
                                     src={bannerPic}
                                     alt="First slide"
                                 />
-                                <Carousel.Caption>
-                                    <div className='slider-title'>
-                                        <h3>Clason Medicine Warehouse</h3>
-                                        <p>We love to here and ready to stoke lot off Medicine. This is Clason Warehouse. So You should quick qoute to enter.</p>
-                                    </div>
-                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -36,12 +30,6 @@ const Banner = () => {
                                     src={bannerPicTwo}
                                     alt="Second slide"
                                 />
-                                <Carousel.Caption>
-                                    <div className='slider-title'>
-                                        <h3>Clason Medicine Warehouse</h3>
-                                        <p>We love to here and ready to stoke lot off Medicine. This is Clason Warehouse. So You should quick qoute to enter.</p>
-                                    </div>
-                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -49,12 +37,6 @@ const Banner = () => {
                                     src={bannerPicThree}
                                     alt="Third slide"
                                 />
-                                <Carousel.Caption>
-                                    <div className='slider-title'>
-                                        <h3>Clason Medicine Warehouse</h3>
-                                        <p>We love to here and ready to stoke lot off Medicine. This is Clason Warehouse. So You should quick qoute to enter.</p>
-                                    </div>
-                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -62,12 +44,6 @@ const Banner = () => {
                                     src={bannerPicFour}
                                     alt="Third slide"
                                 />
-                                <Carousel.Caption>
-                                    <div className='slider-title'>
-                                        <h3>Clason Medicine Warehouse</h3>
-                                        <p>We love to here and ready to stoke lot off Medicine. This is Clason Warehouse. So You should quick qoute to enter.</p>
-                                    </div>
-                                </Carousel.Caption>
                             </Carousel.Item>
                             <Carousel.Item>
                                 <img
@@ -75,12 +51,6 @@ const Banner = () => {
                                     src={bannerPicFive}
                                     alt="Third slide"
                                 />
-                                <Carousel.Caption>
-                                    <div className='slider-title'>
-                                        <h3>Clason Medicine Warehouse</h3>
-                                        <p>We love to here and ready to stoke lot off Medicine. This is Clason Warehouse. So You should quick qoute to enter.</p>
-                                    </div>
-                                </Carousel.Caption>
                             </Carousel.Item>
                         </Carousel>
                     </div>

@@ -125,3 +125,8 @@
 
     background-color: #0faf97d5 !important;
 }
+
+.section-heading h3 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    letter-spacing: 3px;
+}

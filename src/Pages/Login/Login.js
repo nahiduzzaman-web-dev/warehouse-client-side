@@ -7,6 +7,7 @@ import loginImage from '../../images/login/login.jpg';
 import Social from '../Social/Social';
 import { GoSignIn } from 'react-icons/go';
 import './Login.css';
+import Loading from '../Loading/Loading';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -49,7 +50,7 @@ const Login = () => {
 
 
     if (loading || sending) {
-        return <p>Loading ...</p>
+        return <Loading></Loading>
     }
 
     if (user) {
@@ -90,7 +91,7 @@ const Login = () => {
                                             <span className="ml-auto text-danger forget" onClick={handleResetPassword}>Forgot Password</span>
                                         </div>
 
-                                        <div className='mb-3 d-flex justify-content-center'>
+                                        <div className='mb-3 d-flex justify-content-center login'>
                                             <input type="submit" value="Log In" className="btn btn-block login-btn" />
                                         </div>
 

@@ -4,6 +4,7 @@ import { FcGoogle } from 'react-icons/fc';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import './Social.css';
 
 
@@ -12,14 +13,14 @@ const Social = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location.state?.from?.pathname || "/";
+    let from = location.state?.from?.pathname || "/inventory";
 
 
     if (user) {
         navigate(from, { replace: true });
     }
     if (loading) {
-        return <p>Loading ...</p>
+        return <Loading></Loading>
     }
     if (error) {
         toast.warn('Sign with your google account!', {

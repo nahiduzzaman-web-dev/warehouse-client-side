@@ -5,6 +5,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { signOut } from 'firebase/auth';
+import './Headers.css';
 
 const Headers = () => {
     const [user] = useAuthState(auth);
@@ -30,9 +31,10 @@ const Headers = () => {
                         <Nav>
                             {
                                 user && <>
-                                    <Nav.Link as={Link} to="addservice">Add</Nav.Link>
-                                    <Nav.Link as={Link} to="manage">Manage</Nav.Link>
-                                    <Nav.Link as={Link} to="orders">Orders</Nav.Link>
+                                    <Nav.Link as={Link} to="manageitems">Manage Items</Nav.Link>
+                                    <Nav.Link as={Link} to="additems">Add Items</Nav.Link>
+                                    <Nav.Link as={Link} to="myitems">My Items</Nav.Link>
+                                    <Nav.Link className='user-name mx-2' as={Link} to="myitems" disabled>{user?.displayName}</Nav.Link>
                                 </>
                             }
                             {

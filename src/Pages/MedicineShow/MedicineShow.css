@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+.single-card {
+    border: none;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.single-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    cursor: pointer;
+    cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"), auto;
+}
+
+.card-footer {
+    background-color: #ffffff;
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.card-picture {
+    height: 230px;
+}
+
+.price {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(255, 0, 0, 0.753);
+}
+
+.dolar {
+    font-size: 20px;
+    color: red;
+}
+
+.medicine-name {
+    letter-spacing: 1px;
+}
+
+.supplier-name {
+    color: #0faf97d5;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.description {
+    height: 250px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.quantity-container {
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.quantity {
+    font-size: 18px;
+}
+
+.quantity-amount {
+    font-family: 'Secular One', sans-serif;
+    letter-spacing: 2px;
+}
+
+.update-btn {
+    border: none;
+    background-color: #0faf97d5;
+    padding: 8px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.update-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: #0f8aaf;
+    color: #ffffff;
+}

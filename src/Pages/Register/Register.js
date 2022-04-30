@@ -4,6 +4,7 @@ import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import Social from '../Social/Social';
 import './Register.css';
 
@@ -65,7 +66,7 @@ const Register = () => {
         }
 
         if (loading) {
-            return <p>Loading ....</p>
+            return <Loading></Loading>
         }
     }
     return (

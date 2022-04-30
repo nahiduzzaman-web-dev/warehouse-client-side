@@ -1,0 +1,34 @@
+import React from 'react';
+import { Card, CardGroup } from 'react-bootstrap';
+import './MedicineShow.css';
+
+const MedicineShow = ({ medicine }) => {
+    const { _id, medicine_name, supplier_name, price, quantity, picture, sort_description } = medicine;
+    return (
+        <div className='col-md-4 col-sm-6 col-12'>
+            <CardGroup>
+                <Card className='single-card mb-5 mx-2'>
+                    <Card.Img variant="top" src={picture} className='card-picture' />
+                    <Card.Body>
+                        <div className='d-flex justify-content-between'>
+                            <Card.Title className='medicine-name'>{medicine_name}</Card.Title>
+                            <Card.Text className='supplier-name'>{supplier_name}</Card.Text>
+                        </div>
+                        <div className='description mt-3'>
+                            <Card.Text>{sort_description}</Card.Text>
+                        </div>
+                        <div className='d-flex justify-content-between'>
+                            <Card.Text className='quantity-container'><span className='quantity'>Quantity: </span> <span className='quantity-amount'>{quantity}</span> <span>Box</span></Card.Text>
+                            <Card.Text><span className='dolar'>$ </span> <span className='price'>{price}</span></Card.Text>
+                        </div>
+                    </Card.Body>
+                    <Card.Footer className='card-footer mb-2'>
+                        <button className='update-btn'>Update</button>
+                    </Card.Footer>
+                </Card>
+            </CardGroup>
+        </div>
+    );
+};
+
+export default MedicineShow;
