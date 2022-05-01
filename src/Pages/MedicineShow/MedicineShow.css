@@ -11,11 +11,12 @@
     cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"), auto;
 }
 
-.card-footer {
+.footer-btn {
     background-color: #ffffff;
     border: none;
     display: flex;
     justify-content: center;
+
 }
 
 .card-picture {

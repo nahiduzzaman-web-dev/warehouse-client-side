@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
 import auth from '../../firebase.init';
 import loginImage from '../../images/login/login.jpg';
 import Social from '../Social/Social';
@@ -14,7 +14,7 @@ const Login = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location.state?.from?.pathname || "/inventory";
+    const from = location.state?.from?.pathname || "/";
 
     const navigateRegister = e => {
         navigate('/register');
@@ -28,7 +28,6 @@ const Login = () => {
     ] = useSignInWithEmailAndPassword(auth);
     const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
-
     const formSubmit = async (e) => {
         e.preventDefault();
         const email = emailRef.current.value;
@@ -41,10 +40,33 @@ const Login = () => {
         const email = emailRef.current.value;
         if (email) {
             await sendPasswordResetEmail(email);
-            toast('Sent email');
+            toast.success('Check Your email, Send Reset Link', {
+                style: {
+                    border: '2px solid blue',
+                    padding: '5px 20px',
+                    color: '#ffffff',
+                    backgroundColor: 'blue',
+                },
+                iconTheme: {
+                    primary: '#ffffff',
+                    secondary: 'green',
+                },
+            });
         }
         else {
-            toast('please enter your email address');
+            // toast('please enter your email address');
+            toast.error('Please Enter Your Email !', {
+                style: {
+                    border: '2px solid tomato',
+                    padding: '5px 20px',
+                    color: '#ffffff',
+                    backgroundColor: 'tomato',
+                },
+                iconTheme: {
+                    primary: 'lightgray',
+                    secondary: 'red',
+                },
+            });
         }
     }
 
@@ -59,7 +81,18 @@ const Login = () => {
 
 
     if (error) {
-        toast('invalid email Or password', error.message);
+        toast.error('Invalid Email Or Password.', {
+            style: {
+                border: '2px solid red',
+                padding: '5px 20px',
+                color: '#ffffff',
+                backgroundColor: 'red',
+            },
+            iconTheme: {
+                primary: '#ffffff',
+                secondary: 'red',
+            },
+        });
 
     }
     return (
@@ -116,6 +149,7 @@ const Login = () => {
                                 </div>
                             </div>
                         </div>
+                        <Toaster />
                     </div>
 
                 </div>

@@ -2,7 +2,7 @@ import { sendEmailVerification } from 'firebase/auth';
 import React, { useRef } from 'react';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { toast, ToastContainer } from 'react-toastify';
+import toast, { Toaster } from 'react-hot-toast';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
 import Social from '../Social/Social';
@@ -14,7 +14,7 @@ const Register = () => {
     const passwordRef = useRef('');
     const navigate = useNavigate();
     const location = useLocation();
-    let from = location.state?.from?.pathname || "/inventory";
+    let from = location.state?.from?.pathname || "/";
 
     const [
         createUserWithEmailAndPassword,
@@ -37,38 +37,44 @@ const Register = () => {
         await createUserWithEmailAndPassword(email, password);
 
         await sendEmailVerification();
-        toast('Check Your Email for Verification &#10003;', {
-            position: "top-center",
-            autoClose: 5000,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: true,
-            draggable: true,
-            progress: undefined,
+        toast.success('Check Your email, Send Verification Link', {
+            style: {
+                border: '2px solid blue',
+                padding: '5px 20px',
+                color: '#ffffff',
+                backgroundColor: 'blue',
+            },
+            iconTheme: {
+                primary: '#ffffff',
+                secondary: 'green',
+            },
         });
 
-
-
-        if (error) {
-            toast.error('invalid email or password', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-            });
-        }
-
-        if (user) {
-            navigate(from, { replace: true });
-        }
-
-        if (loading) {
-            return <Loading></Loading>
-        }
     }
+
+    if (error) {
+        toast.error('Invalid Email Or Password.', {
+            style: {
+                border: '2px solid red',
+                padding: '5px 20px',
+                color: '#ffffff',
+                backgroundColor: 'red',
+            },
+            iconTheme: {
+                primary: '#ffffff',
+                secondary: 'red',
+            },
+        });
+    }
+
+    if (user) {
+        navigate(from, { replace: true });
+    }
+
+    if (loading) {
+        return <Loading></Loading>
+    }
+
     return (
         <div>
             <form onSubmit={formSubmit}>
@@ -102,17 +108,7 @@ const Register = () => {
                     <Social></Social>
                 </div>
             </div>
-            <ToastContainer
-                position="top-center"
-                autoClose={5000}
-                hideProgressBar={false}
-                newestOnTop={false}
-                closeOnClick
-                rtl={false}
-                pauseOnFocusLoss
-                draggable
-                pauseOnHover
-            />
+            <Toaster />
         </div>
     );
 };

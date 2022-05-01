@@ -22,9 +22,9 @@ const MedicineShow = ({ medicine }) => {
                             <Card.Text><span className='dolar'>$ </span> <span className='price'>{price}</span></Card.Text>
                         </div>
                     </Card.Body>
-                    <Card.Footer className='card-footer mb-2'>
+                    <div className='footer-btn mb-2'>
                         <button className='update-btn'>Update</button>
-                    </Card.Footer>
+                    </div>
                 </Card>
             </CardGroup>
         </div>

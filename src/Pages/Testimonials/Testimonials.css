@@ -108,6 +108,7 @@
 .footer-card {
     border: none !important;
     position: relative;
+    margin-top: 10px;
 }
 
 .quotefill {

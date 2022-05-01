@@ -5,12 +5,16 @@ import bannerPicTwo from '../../images/banner/banner-2.jpg';
 import bannerPicThree from '../../images/banner/banner-3.jpg';
 import bannerPicFour from '../../images/banner/banner-4.jpg';
 import bannerPicFive from '../../images/banner/banner-5.jpg';
+import welcome from '../../images/welcome-here.gif';
 import Register from '../Register/Register';
 import './Banner.css';
 import { Link } from 'react-router-dom';
 import { TiLocationArrow } from 'react-icons/ti';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 const Banner = () => {
+    const [user] = useAuthState(auth);
     return (
         <div className='container my-5'>
             <div className="row">
@@ -68,15 +72,31 @@ const Banner = () => {
                 <div className="col-md-6 col-12">
                     <div className='quote-section'>
                         <div className='text-center w-75 ms-auto quote-banner'>
-                            <div>
-                                <h3>REQUEST A QUICK QUOTE</h3>
-                                <p>
-                                    We love to here and ready to stoke lot off Medicine.
-                                    This is Clason Warehouse. So You should quick qoute to enter.
+                            {
+                                user ?
+                                    <div>
+                                        <h3>THANKS FOR QUOTE</h3>
+                                        <p>
+                                            We love to here and ready to stoke lot off Medicine.
+                                            This is Clason Warehouse. Now you can explore.
 
-                                </p>
-                            </div>
-                            <Register></Register>
+                                        </p>
+                                        <img src={welcome} alt="" className='img-fluid welcome-here' />
+                                    </div>
+
+                                    :
+                                    <div>
+                                        <div>
+                                            <h3>REQUEST A QUICK QUOTE</h3>
+                                            <p>
+                                                We love to here and ready to stoke lot off Medicine.
+                                                This is Clason Warehouse. So You should quick qoute to enter.
+
+                                            </p>
+                                        </div>
+                                        <Register></Register>
+                                    </div>
+                            }
                         </div>
                     </div>
                 </div>
