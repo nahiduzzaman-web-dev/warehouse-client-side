@@ -9,6 +9,8 @@ import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
 import Footer from './Pages/Footer/Footer';
 import Testimonials from './Pages/Testimonials/Testimonials';
+import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import UpdateMedicine from './Pages/UpdateMedicine/UpdateMedicine';
 
 function App() {
   return (
@@ -21,6 +23,13 @@ function App() {
         <Route path='/inventory' element={<Inventory></Inventory>}></Route>
         <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/testimonials' element={<Testimonials></Testimonials>}></Route>
+
+        <Route path='/update/:updateId' element={
+          <RequireAuth>
+            <UpdateMedicine></UpdateMedicine>
+          </RequireAuth>
+        }></Route>
+
         <Route path='*' element={<NotFound></NotFound>}></Route>
 
 

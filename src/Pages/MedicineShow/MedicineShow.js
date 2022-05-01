@@ -1,9 +1,15 @@
 import React from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import './MedicineShow.css';
 
 const MedicineShow = ({ medicine }) => {
     const { _id, medicine_name, supplier_name, price, quantity, picture, sort_description } = medicine;
+    const navigate = useNavigate();
+
+    const navigateToCheckOut = (_id) => {
+        navigate(`/update/${_id}`);
+    }
     return (
         <div className='col-md-4 col-sm-6 col-12'>
             <CardGroup>
@@ -23,7 +29,7 @@ const MedicineShow = ({ medicine }) => {
                         </div>
                     </Card.Body>
                     <div className='footer-btn mb-2'>
-                        <button className='update-btn'>Update</button>
+                        <button onClick={() => navigateToCheckOut(_id)} className='update-btn'>Update</button>
                     </div>
                 </Card>
             </CardGroup>

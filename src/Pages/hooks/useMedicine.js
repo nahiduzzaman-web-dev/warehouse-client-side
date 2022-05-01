@@ -4,7 +4,7 @@ const useMedicine = () => {
     const [medicine, setMedicine] = useState([]);
 
     useEffect(() => {
-        fetch('fakeData.json')
+        fetch('http://localhost:5000/medicine')
             .then(res => res.json())
             .then(data => setMedicine(data));
     }, []);

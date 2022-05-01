@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+.medicine-id {
+    font-size: 15px;
+    color: lightslategrey;
+    font-style: italic;
+}
+
+.update-card {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.update-name {
+    position: relative;
+}
+
+.register-company {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+}
+
+.supply {
+    font-size: 16px;
+    color: blueviolet;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.update-quantity-container {
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
+    width: 50%;
+    background-color: lightgray;
+    margin: 0 auto;
+
+}
+
+.update-quantity-container p {
+    color: #000000c7;
+    font-size: 20px;
+    font-family: 'Lato', sans-serif;
+    padding: 10px 0px 0px 0px;
+    letter-spacing: 2px;
+}
+
+.update-box {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    font-size: 25px;
+    color: crimson;
+    padding: 10px;
+    background-color: gainsboro;
+
+}
+
+.box {
+    font-size: 16px;
+}
+
+.delivery-btn {
+    border: none;
+    background-color: #0faf97d5;
+    padding: 8px 20px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+}
+
+.delivery-btn:hover {
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+    background-color: #0f8aaf;
+    color: #ffffff;
+}
