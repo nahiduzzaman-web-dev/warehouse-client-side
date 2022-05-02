@@ -5,6 +5,7 @@ import { useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './UpdateMedicine.css';
 import { FcRegisteredTrademark } from 'react-icons/fc';
+import { TiArrowBack } from 'react-icons/ti';
 
 const UpdateMedicine = () => {
     let { updateId } = useParams();
@@ -31,7 +32,7 @@ const UpdateMedicine = () => {
                             </Card.Header>
                             <Card.Body>
                                 <div className='update-medicine-image my-3'>
-                                    <img src={medicine.picture} alt="" />
+                                    <img src={medicine.picture} alt="" className='img-fluid' />
                                 </div>
 
                                 <Card.Text className='update-paragraph'>
@@ -43,14 +44,22 @@ const UpdateMedicine = () => {
 
                                     </div>
                                 </div>
+                                <div className="update-quantity-container">
+                                    <p>
+                                        QUANTITY: <span className='update-box mx-2'>{medicine.quantity}</span> <span className='box'>Box</span>
+                                    </p>
+                                </div>
                             </Card.Body>
-                            <div className="update-quantity-container">
-                                <p>
-                                    <span>QUANTITY:</span> <span className='update-box mx-3'>{medicine.quantity}</span> <span className='box'>Box</span>
-                                </p>
-                            </div>
-                            <div className='d-block my-3'>
-                                <button className='delivery-btn'>Delivery</button>
+
+                            <div className='d-flex justify-content-center flex-column flex-md-row'>
+                                <div className='d-block my-3 mx-4'>
+                                    <button className='manga-btn'><TiArrowBack /> Manage Inventories</button>
+                                </div>
+                                <div className='d-block my-3'>
+                                    <button className='delivery-btn'>Delivery</button>
+                                </div>
+
+
                             </div>
                         </Card>
                     </div>

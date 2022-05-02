@@ -32,38 +32,22 @@
 }
 
 .update-quantity-container {
-    padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 2px 4px 0px inset;
     width: 50%;
-    background-color: lightgray;
     margin: 0 auto;
-
 }
 
 .update-quantity-container p {
     color: #000000c7;
-    font-size: 20px;
     font-family: 'Lato', sans-serif;
-    padding: 10px 0px 0px 0px;
     letter-spacing: 2px;
 }
 
 .update-paragraph {
     padding: 10px 20px;
+    width: 50%;
+    margin: 0 auto;
 }
 
-.update-box {
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    font-size: 25px;
-    color: crimson;
-    padding: 10px;
-    background-color: gainsboro;
-
-}
-
-.box {
-    font-size: 16px;
-}
 
 .delivery-btn {
     border: none;
@@ -79,4 +63,26 @@
     box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
     background-color: #0f8aaf;
     color: #ffffff;
+}
+
+.manga-btn {
+    border: 2px solid #0f8aaf;
+    background-color: #fff;
+    padding: 8px 15px;
+    border-radius: 50px;
+}
+
+.manga-btn:hover {
+    background-color: lightslategray;
+    color: #ffffff;
+}
+
+@media screen and (max-width: 600px) {
+    .update-paragraph {
+        width: 100%;
+    }
+
+    .update-quantity-container {
+        width: 100%;
+    }
 }

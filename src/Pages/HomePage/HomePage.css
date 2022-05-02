@@ -1,0 +1,21 @@
+.m-inventory {
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+}
+
+.m-inventory .manage-inventory-btn {
+    border: none;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #0faf97d5;
+    letter-spacing: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #0faf97d5;
+}
+
+.m-inventory .manage-inventory-btn:hover {
+    background-color: #0faf97d5;
+    color: #fff;
+}
