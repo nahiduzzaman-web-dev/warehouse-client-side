@@ -4,7 +4,7 @@ import MedicineShow from '../MedicineShow/MedicineShow';
 
 
 const Inventory = () => {
-    const [medicine, setMedicine] = useMedicine();
+    const [medicines] = useMedicine();
     return (
         <div className='container mt-5'>
             <div class="section-heading my-5">
@@ -15,7 +15,7 @@ const Inventory = () => {
             </div>
             <div className='row'>
                 {
-                    medicine.map(medicine => <MedicineShow
+                    medicines.map(medicine => <MedicineShow
                         key={medicine._id}
                         medicine={medicine}
                     ></MedicineShow>)

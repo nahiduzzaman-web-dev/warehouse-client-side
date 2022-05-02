@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
 const useMedicine = () => {
-    const [medicine, setMedicine] = useState([]);
+    const [medicines, setMedicines] = useState([]);
 
     useEffect(() => {
         fetch('http://localhost:5000/medicine')
             .then(res => res.json())
-            .then(data => setMedicine(data));
+            .then(data => setMedicines(data));
     }, []);
-    return [medicine, setMedicine];
+    return [medicines, setMedicines];
 };
 
 export default useMedicine;

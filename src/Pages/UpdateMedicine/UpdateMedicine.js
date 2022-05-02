@@ -30,11 +30,11 @@ const UpdateMedicine = () => {
                                 </h4>
                             </Card.Header>
                             <Card.Body>
-                                <div>
+                                <div className='update-medicine-image my-3'>
                                     <img src={medicine.picture} alt="" />
                                 </div>
 
-                                <Card.Text>
+                                <Card.Text className='update-paragraph'>
                                     {medicine.sort_description}
                                 </Card.Text>
                                 <div>

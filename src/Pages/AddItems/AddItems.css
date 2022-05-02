@@ -1,0 +1,17 @@
+.add-form {
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.add-medicine {
+    letter-spacing: 2px;
+}
+
+.btn-submitform {
+    background-color: lightseagreen;
+    border: none;
+    padding: 8px 20px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 50px;
+}

@@ -11,6 +11,8 @@ import Footer from './Pages/Footer/Footer';
 import Testimonials from './Pages/Testimonials/Testimonials';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import UpdateMedicine from './Pages/UpdateMedicine/UpdateMedicine';
+import AddItems from './Pages/AddItems/AddItems';
+import MyItems from './Pages/MyItems/MyItems';
 
 function App() {
   return (
@@ -27,6 +29,18 @@ function App() {
         <Route path='/update/:updateId' element={
           <RequireAuth>
             <UpdateMedicine></UpdateMedicine>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/additems' element={
+          <RequireAuth>
+            <AddItems></AddItems>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/myitems' element={
+          <RequireAuth>
+            <MyItems></MyItems>
           </RequireAuth>
         }></Route>
 

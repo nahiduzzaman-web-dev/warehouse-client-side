@@ -1,0 +1,20 @@
+.supplier-myitems {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 2px;
+
+}
+
+.myItems h5 {
+    margin-bottom: 15px;
+    border: 2px solid #0faf97d5;
+    padding: 15px;
+    position: relative;
+}
+
+.delete-btn {
+    color: red;
+    position: absolute;
+    top: -5px;
+    right: -4px;
+    font-size: 22px;
+}
