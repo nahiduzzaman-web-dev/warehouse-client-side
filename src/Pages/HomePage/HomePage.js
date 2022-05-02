@@ -27,7 +27,7 @@ const HomePage = () => {
                 <div className='row'>
                     <div className='col-md-12 col-12'>
                         <div className='m-inventory mb-5'>
-                            <button onClick={() => navigate('inventory')} className='manage-inventory-btn'>Manage Inventories</button>
+                            <button onClick={() => navigate('manageitems')} className='manage-inventory-btn'>Manage Inventories</button>
                         </div>
                     </div>
 

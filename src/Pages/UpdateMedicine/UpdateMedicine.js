@@ -1,16 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Card } from 'react-bootstrap';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import auth from '../../firebase.init';
 import './UpdateMedicine.css';
 import { FcRegisteredTrademark } from 'react-icons/fc';
-import { TiArrowBack } from 'react-icons/ti';
+import { TiArrowForward } from 'react-icons/ti';
 
 const UpdateMedicine = () => {
     let { updateId } = useParams();
     const [medicine, setMedicine] = useState({});
     const [user] = useAuthState(auth);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const url = `http://localhost:5000/medicine/${updateId}`
@@ -53,13 +54,11 @@ const UpdateMedicine = () => {
 
                             <div className='d-flex justify-content-center flex-column flex-md-row'>
                                 <div className='d-block my-3 mx-4'>
-                                    <button className='manga-btn'><TiArrowBack /> Manage Inventories</button>
+                                    <button onClick={() => navigate('/manageitems')} className='manga-btn'>Manage Inventories <TiArrowForward /></button>
                                 </div>
                                 <div className='d-block my-3'>
                                     <button className='delivery-btn'>Delivery</button>
                                 </div>
-
-
                             </div>
                         </Card>
                     </div>

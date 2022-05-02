@@ -13,6 +13,7 @@ import RequireAuth from './Pages/RequireAuth/RequireAuth';
 import UpdateMedicine from './Pages/UpdateMedicine/UpdateMedicine';
 import AddItems from './Pages/AddItems/AddItems';
 import MyItems from './Pages/MyItems/MyItems';
+import ManageItems from './Pages/ManageItems/ManageItems';
 
 function App() {
   return (
@@ -35,6 +36,12 @@ function App() {
         <Route path='/additems' element={
           <RequireAuth>
             <AddItems></AddItems>
+          </RequireAuth>
+        }></Route>
+
+        <Route path='/manageitems' element={
+          <RequireAuth>
+            <ManageItems></ManageItems>
           </RequireAuth>
         }></Route>
 
