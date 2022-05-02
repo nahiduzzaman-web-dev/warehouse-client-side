@@ -24,7 +24,12 @@ const AddItems = () => {
     return (
         <div className='mx-auto w-50 my-5 add-form'>
             <div className='p-5'>
-                <h3 className='text-center add-medicine'>Add Medicine</h3>
+                <div className="section-heading my-5">
+                    <h3 className='text-center add-medicine'>ADD MEDICINE</h3>
+                    <div className='d-flex justify-content-center'>
+                        <span className="animate-border border-black"></span>
+                    </div>
+                </div>
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='mb-3' placeholder='Medicine Trade name' {...register("medicine_name", { required: true, maxLength: 50 })} />
                     <input className='mb-3' placeholder='Supplier name' {...register("supplier_name", { required: true, maxLength: 50 })} />

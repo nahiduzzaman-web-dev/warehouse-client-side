@@ -7,6 +7,12 @@ import quesAns from '../../images/question-answer_prev_ui.png';
 const Blogs = () => {
     return (
         <div className='container my-5'>
+            <div className="section-heading my-5">
+                <h3 className='text-center'>BLOGS - QUESTION & ANSWER</h3>
+                <div className='d-flex justify-content-center'>
+                    <span className="animate-border border-black"></span>
+                </div>
+            </div>
             <div className="row">
                 <div className="col-md-4 col-12">
                     <img src={quesAns} alt="" className='img-fluid' />

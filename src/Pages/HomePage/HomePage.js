@@ -16,6 +16,12 @@ const HomePage = () => {
             <Banner></Banner>
             <Company></Company>
             <div className='container'>
+                <div className="section-heading my-5">
+                    <h3 className='text-center'>INVENTORY</h3>
+                    <div className='d-flex justify-content-center'>
+                        <span className="animate-border border-black"></span>
+                    </div>
+                </div>
                 <div className='row'>
                     {
                         medicines.slice(0, 6).map(medicine => <MedicineShow

@@ -4,6 +4,12 @@
 
 }
 
+.add-new-items {
+    border: none;
+    background-color: lightgreen;
+    padding: 5px 10px;
+
+}
 
 .myItems .manage-items-container {
     margin-bottom: 15px;
@@ -28,4 +34,15 @@
     width: 150px;
     border-radius: 5px;
     height: 170px;
+}
+
+@media screen and (max-width: 600px) {
+    .myItems .manage-items-container {
+        width: 100%;
+    }
+
+    .delete-btn {
+        right: -8px;
+        top: -7px;
+    }
 }

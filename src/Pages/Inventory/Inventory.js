@@ -7,10 +7,10 @@ const Inventory = () => {
     const [medicines] = useMedicine();
     return (
         <div className='container mt-5'>
-            <div class="section-heading my-5">
+            <div className="section-heading my-5">
                 <h3 className='text-center'>MEDICINE LIST</h3>
                 <div className='d-flex justify-content-center'>
-                    <span class="animate-border border-black"></span>
+                    <span className="animate-border border-black"></span>
                 </div>
             </div>
             <div className='row'>

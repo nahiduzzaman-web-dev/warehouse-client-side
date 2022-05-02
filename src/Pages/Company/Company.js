@@ -15,10 +15,10 @@ const Company = () => {
         <div className='container my-5'>
             <div className="row">
                 <div className="col-md-12 col-12">
-                    <div class="section-heading">
+                    <div className="section-heading">
                         <h3 className='text-center'>TOUCH IN PHARMA COMPANY</h3>
                         <div className='d-flex justify-content-center'>
-                            <span class="animate-border border-black"></span>
+                            <span className="animate-border border-black"></span>
                         </div>
                     </div>
 
