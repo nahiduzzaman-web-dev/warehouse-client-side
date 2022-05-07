@@ -3,9 +3,10 @@ import { useForm } from "react-hook-form";
 import './AddItems.css';
 import auth from '../../firebase.init';
 import { useAuthState } from 'react-firebase-hooks/auth';
+import toast, { Toaster } from 'react-hot-toast';
 
 const AddItems = () => {
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, reset } = useForm();
     const [user] = useAuthState(auth);
 
     const onSubmit = data => {
@@ -20,9 +21,23 @@ const AddItems = () => {
             .then(res => res.json())
             .then(result => {
                 console.log(result);
+                if (result) {
+                    reset();
+                }
             })
 
-
+        toast.success('Add your Item. Success!', {
+            style: {
+                border: '2px solid lightblue',
+                padding: '5px 20px',
+                color: '#ffffff',
+                backgroundColor: 'lightblue',
+            },
+            iconTheme: {
+                primary: '#ffffff',
+                secondary: 'green',
+            },
+        });
     };
 
     return (
@@ -47,6 +62,7 @@ const AddItems = () => {
                     <input className='mb-3 w-50 mx-auto btn-submitform' placeholder='' type="submit" value="Add New Medicine" />
                 </form>
             </div>
+            <Toaster />
         </div>
     );
 };

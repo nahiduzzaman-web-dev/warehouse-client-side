@@ -15,7 +15,7 @@
     margin-bottom: 15px;
     border: 2px solid #0faf97d5;
     padding: 15px;
-    position: relative;
+    /* position: relative; */
     width: 50%;
     margin: 0 auto;
     margin-bottom: 20px;
@@ -24,17 +24,49 @@
 
 .delete-btn {
     color: red;
-    position: absolute;
+    /* position: absolute;
     top: 10px;
-    right: -4px;
+    right: -4px; */
     font-size: 40px;
     cursor: pointer;
 }
 
-.manage-pic {
+/* .manage-pic {
     width: 150px;
     border-radius: 5px;
     height: 170px;
+} */
+.tbl-image {
+    width: 60px;
+    height: 60px !important;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+
+.mobile-device-container {
+    border: 2px solid lightgreen;
+    padding: 20px;
+    margin-bottom: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.delete-sm-btn {
+    border: none;
+    background-color: crimson;
+    color: #ffffff;
+    padding: 5px 10px;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1px;
+    border-radius: 50px;
 }
 
 @media screen and (max-width: 600px) {
@@ -45,5 +77,9 @@
     .delete-btn {
         right: -8px;
         top: -7px;
+    }
+
+    .list {
+        grid-template-columns: repeat(3, 1fr);
     }
 }

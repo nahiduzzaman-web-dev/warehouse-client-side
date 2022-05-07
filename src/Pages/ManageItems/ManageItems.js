@@ -32,36 +32,33 @@ const ManageItems = () => {
                     <span className="animate-border border-black"></span>
                 </div>
             </div>
-            <div className=''>
+            <div className='mb-5'>
                 <button onClick={() => navigate('/additems')} className='add-new-items'>ADD NEW ITEMS</button>
             </div>
             <div className='d-flex justify-content-center'>
                 <div className='myItems'>
                     {
-                        medicines.map(medicine => <div key={medicine._id}>
-                            <div className='manage-items-container'>
-                                <h5 className=''>
-                                    <span className='supplier-myitems mx-2'>{medicine.supplier_name}: </span>
-                                    <span>{medicine.medicine_name}</span>
-                                </h5>
-                                <div className='d-md-flex justify-content-center mb-3'>
-                                    <img src={medicine.picture} alt="" className='img-fluid manage-pic me-3 p-2' />
-                                    <p className='py-3'>
-                                        {medicine.sort_description}
-                                    </p>
-                                </div>
+                        medicines.map(medicine => <div>
 
-                                <div className='p-2 text-center'>
-                                    <p >Price: {medicine.price}</p>
-                                    <p>Quantity: {medicine.quantity}</p>
-                                </div>
-
-
-
-                                <div>
-                                    <span onClick={() => handleDelete(medicine._id)}> <MdDeleteForever className='delete-btn' /></span>
+                            <div className='list-container d-none d-md-block'>
+                                <div className='list'>
+                                    <div>Name: {medicine.medicine_name}</div>
+                                    <div>Supplier: {medicine.supplier_name}</div>
+                                    <div>Quantity: {medicine.quantity}</div>
+                                    <div>Price: $ {medicine.price}</div>
+                                    <div><img src={medicine.picture} alt="" className='img-fluid tbl-image' /></div>
+                                    <div> <span onClick={() => handleDelete(medicine._id)}> <MdDeleteForever className='delete-btn' /></span></div>
                                 </div>
                             </div>
+                            <div className='d-block d-md-none mobile-device-container'>
+                                <div>Name: {medicine.medicine_name}</div>
+                                <div>Supplier: {medicine.supplier_name}</div>
+                                <div>Quantity: {medicine.quantity}</div>
+                                <div>Price: $ {medicine.price}</div>
+                                <div><img src={medicine.picture} alt="" className='img-fluid tbl-image' /></div>
+                                <div className='my-3'> <button onClick={() => handleDelete(medicine._id)} className='delete-sm-btn'>DELETE</button></div>
+                            </div>
+
                         </div>)
                     }
                 </div>

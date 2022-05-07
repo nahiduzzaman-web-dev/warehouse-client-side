@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { MdDeleteForever } from 'react-icons/md';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../firebase.init';
 
 
 const MyItems = () => {
-
+    let { updateId } = useParams();
     const [medicines, setMedicines] = useState([]);
     const navigate = useNavigate();
+    const [user] = useAuthState(auth);
 
     useEffect(() => {
         fetch(`http://localhost:5000/myitems`, {
@@ -18,6 +21,7 @@ const MyItems = () => {
             .then(res => res.json())
             .then(json => {
                 setMedicines(json);
+                console.log(setMedicines(json));
 
             })
     }, []);
@@ -46,15 +50,19 @@ const MyItems = () => {
                     <span className="animate-border border-black"></span>
                 </div>
             </div>
+            <div className='my-3'>
+                <h5>You login with: {user.email}</h5>
+            </div>
             <div className=''>
                 <button onClick={() => navigate('/additems')} className='add-new-items'>ADD NEW ITEMS</button>
             </div>
             <div className='d-flex justify-content-center'>
                 <div className='myItems'>
+                    <h1>{updateId}</h1>
                     {
+
                         medicines.map(medicine =>
                             <div key={medicine._id}>
-
                                 <div className='manage-items-container'>
                                     <h5 className=''>
                                         <span className='supplier-myitems mx-2'>{medicine.supplier_name}: </span>
