@@ -17,6 +17,18 @@ const Social = () => {
 
 
     if (user) {
+        const url = `http://localhost:5000/login`;
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify({ email: user.user.email }),
+        })
+            .then(res => res.json())
+            .then(json => {
+                localStorage.setItem("token", json.token);
+            });
         navigate(from, { replace: true });
     }
     if (loading) {

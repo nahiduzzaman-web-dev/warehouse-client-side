@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card } from 'react-bootstrap';
-import { useAuthState } from 'react-firebase-hooks/auth';
+import { Card } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
-import auth from '../../firebase.init';
 import './UpdateMedicine.css';
 import { FcRegisteredTrademark } from 'react-icons/fc';
 import { TiArrowForward } from 'react-icons/ti';
@@ -10,7 +8,6 @@ import { TiArrowForward } from 'react-icons/ti';
 const UpdateMedicine = () => {
     let { updateId } = useParams();
     const [medicine, setMedicine] = useState({});
-    const [user] = useAuthState(auth);
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -18,7 +15,36 @@ const UpdateMedicine = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => setMedicine(data));
-    }, [updateId]);
+    }, []);
+
+    const handleDelivery = () => {
+        fetch(`http://localhost:5000/medicine/decrease/${updateId}`, {
+            method: "PUT",
+        })
+            .then(res => res.json())
+            .then(json => {
+                setMedicine({ ...medicine, quantity: medicine.quantity - 1 })
+            });
+
+    }
+
+    const handleRestockButton = async (e) => {
+        e.preventDefault();
+        const value = e.target.restock.value;
+
+        fetch(`http://localhost:5000/medicine/increase/${updateId}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ quantity: value }),
+        })
+            .then(res => res.json())
+            .then(json => {
+                setMedicine({ ...medicine, quantity: parseInt(medicine.quantity) + parseInt(value) })
+            })
+    }
+
     return (
         <div className='container my-5'>
             <div className="row">
@@ -57,8 +83,16 @@ const UpdateMedicine = () => {
                                     <button onClick={() => navigate('/manageitems')} className='manga-btn'>Manage Inventories <TiArrowForward /></button>
                                 </div>
                                 <div className='d-block my-3'>
-                                    <button className='delivery-btn'>Delivery</button>
+                                    <button onClick={handleDelivery} className='delivery-btn'>Delivery</button>
                                 </div>
+                            </div>
+
+                            <div className='my-5'>
+                                <h5>Restock: {medicine.medicine_name} Medicine</h5>
+                                <form onSubmit={handleRestockButton}>
+                                    <input type="number" name="restock" id="" />
+                                    <input type="submit" value="Restock" className='restock-btn' />
+                                </form>
                             </div>
                         </Card>
                     </div>

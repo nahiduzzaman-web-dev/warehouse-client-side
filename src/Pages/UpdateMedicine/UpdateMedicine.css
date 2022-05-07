@@ -77,6 +77,15 @@
     color: #ffffff;
 }
 
+.restock-btn {
+    border: none;
+    background-color: lightgreen;
+    padding: 5px 15px;
+    margin-left: 5px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
 @media screen and (max-width: 600px) {
     .update-paragraph {
         width: 100%;

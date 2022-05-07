@@ -34,6 +34,20 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
+
+        const url = `http://localhost:5000/login`;
+        fetch(url, {
+            method: "POST",
+            headers: {
+                "content-type": "application/json",
+            },
+            body: JSON.stringify({ email }),
+        })
+            .then(res => res.json())
+            .then(json => {
+                console.log(json);
+                localStorage.setItem("token", json.token);
+            });
     }
     // reset password
     const handleResetPassword = async () => {

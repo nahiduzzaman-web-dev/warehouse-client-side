@@ -1,12 +1,14 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import './AddItems.css';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 const AddItems = () => {
     const { register, handleSubmit } = useForm();
+    const [user] = useAuthState(auth);
 
     const onSubmit = data => {
-        console.log(data);
         const url = `http://localhost:5000/medicine/`;
         fetch(url, {
             method: 'POST',
@@ -19,6 +21,8 @@ const AddItems = () => {
             .then(result => {
                 console.log(result);
             })
+
+
     };
 
     return (
@@ -29,6 +33,9 @@ const AddItems = () => {
                     <div className='d-flex justify-content-center'>
                         <span className="animate-border border-black"></span>
                     </div>
+                </div>
+                <div className='my-3'>
+                    <h5>You login with: {user.email}</h5>
                 </div>
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='mb-3' placeholder='Medicine Trade name' {...register("medicine_name", { required: true, maxLength: 50 })} />
