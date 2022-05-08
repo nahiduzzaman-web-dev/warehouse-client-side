@@ -4,7 +4,7 @@ const useMedicine = () => {
     const [medicines, setMedicines] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/medicine')
+        fetch('https://stark-waters-32279.herokuapp.com/medicine')
             .then(res => res.json())
             .then(data => setMedicines(data));
     }, []);

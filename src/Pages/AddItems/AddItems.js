@@ -11,7 +11,7 @@ const AddItems = () => {
 
     const onSubmit = data => {
         const newData = { ...data, email: user.email }
-        const url = `http://localhost:5000/medicine`;
+        const url = `https://stark-waters-32279.herokuapp.com/medicine`;
         fetch(url, {
             method: 'POST',
             headers: {

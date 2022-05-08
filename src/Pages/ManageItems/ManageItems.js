@@ -11,7 +11,7 @@ const ManageItems = () => {
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure ???');
         if (proceed) {
-            const url = `http://localhost:5000/medicine/${id}`;
+            const url = `https://stark-waters-32279.herokuapp.com/medicine/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })
@@ -42,10 +42,22 @@ const ManageItems = () => {
 
                             <div className='list-container d-none d-md-block'>
                                 <div className='list'>
-                                    <div>Name: {medicine.medicine_name}</div>
-                                    <div>Supplier: {medicine.supplier_name}</div>
-                                    <div>Quantity: {medicine.quantity}</div>
-                                    <div>Price: $ {medicine.price}</div>
+                                    <div className='text-center'>
+                                        <h6>Name</h6>
+                                        <p>{medicine.medicine_name}</p>
+                                    </div>
+                                    <div className='text-center'>
+                                        <h6>Supplier</h6>
+                                        <p>{medicine.supplier_name}</p>
+                                    </div>
+                                    <div className='text-center'>
+                                        <h6>Quantity</h6>
+                                        <p>{medicine.quantity}</p>
+                                    </div>
+                                    <div className='text-center'>
+                                        <h6>Price</h6>
+                                        <p>$ {medicine.price}</p>
+                                    </div>
                                     <div><img src={medicine.picture} alt="" className='img-fluid tbl-image' /></div>
                                     <div> <span onClick={() => handleDelete(medicine._id)}> <MdDeleteForever className='delete-btn' /></span></div>
                                 </div>

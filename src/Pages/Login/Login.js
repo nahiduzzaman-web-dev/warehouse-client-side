@@ -35,7 +35,7 @@ const Login = () => {
 
         await signInWithEmailAndPassword(email, password);
 
-        const url = `http://localhost:5000/login`;
+        const url = `https://stark-waters-32279.herokuapp.com/login`;
         fetch(url, {
             method: "POST",
             headers: {

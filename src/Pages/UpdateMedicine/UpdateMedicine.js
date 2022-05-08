@@ -11,14 +11,14 @@ const UpdateMedicine = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        const url = `http://localhost:5000/medicine/${updateId}`
+        const url = `https://stark-waters-32279.herokuapp.com/medicine/${updateId}`
         fetch(url)
             .then(res => res.json())
             .then(data => setMedicine(data));
     }, []);
 
     const handleDelivery = () => {
-        fetch(`http://localhost:5000/medicine/decrease/${updateId}`, {
+        fetch(`https://stark-waters-32279.herokuapp.com/medicine/decrease/${updateId}`, {
             method: "PUT",
         })
             .then(res => res.json())
@@ -32,7 +32,7 @@ const UpdateMedicine = () => {
         e.preventDefault();
         const value = e.target.restock.value;
 
-        fetch(`http://localhost:5000/medicine/increase/${updateId}`, {
+        fetch(`https://stark-waters-32279.herokuapp.com/medicine/increase/${updateId}`, {
             method: "PUT",
             headers: {
                 "Content-Type": "application/json"

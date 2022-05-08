@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Clason Medicine Warehouse
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was react and react Bootstrap with mongodb [Clason Medicine Warehouse](https://clason-warehouse.web.app/).
 
-## Available Scripts
+## How can I make in this project
 
-In the project directory, you can run:
+In the project directory, you can run: [Clason Medicine Warehouse](https://clason-warehouse.web.app/).
 
-### `npm start`
+### `Project Menu`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+PC based with mobile & Tab also. Design is looking incredible web warehouse software.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Home
+- Inventory
+- Blogs
+- Manage Items
+- Add Items
+- My Items
+- But (Manage Items, Add Items, My Items) (protected. You can not visit without login & without email verification.) ✨
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### `service Provided`
 
-### `npm run build`
+> THis is warehouse service web software
+> you can store your medicine product or delete
+> you can restock your medicine quantity
+> you can handle delivery quantity
+> you can check your add items with your gmail login.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `Contact Me to hire`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- [Facebook] (https://www.facebook.com/nahiduzzaman28) - Facebook ID
+- [Github] (https://github.com/nahiduzzaman2021) - GitHub ID
+- [Youtube] (https://www.youtube.com/channel/UCfSCklo94X_Z8T_pTB2IsOA) - Youtube Channel
 
-### `npm run eject`
+### `Project Source Code`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- [Github] (https://github.com/ProgrammingHeroWC4/warehouse-management-client-side-nahiduzzaman2021) - Sourse Code for client side.
+- [Github] (https://github.com/ProgrammingHeroWC4/warehouse-management-server-side-nahiduzzaman2021) - Sourse Code for server side.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+> This is source code link but its private, if you want then contact me by social ID. **Thanks**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### `Project Method`
 
-## Learn More
+> React v18.
+> React Icons.
+> React Router v6.
+> React Firebase Hooks.
+> Custom Hooks.
+> Custom API.
+> Heroku for database
+> Deploy Firebase
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Free Templete, Hell Yeah!**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Licence
+**MD. Nahiduzzaman Nahid**
