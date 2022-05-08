@@ -44,7 +44,7 @@ const AddItems = () => {
     };
 
     return (
-        <div className='mx-auto w-50 my-5 add-form'>
+        <div className='my-5 add-form'>
             <div className='p-5'>
                 <div className="section-heading my-5">
                     <h3 className='text-center add-medicine'>ADD MEDICINE</h3>
@@ -58,11 +58,11 @@ const AddItems = () => {
                 <form className='d-flex flex-column' onSubmit={handleSubmit(onSubmit)}>
                     <input className='mb-3' placeholder='Medicine Trade name' {...register("medicine_name", { required: true, maxLength: 50 })} />
                     <input className='mb-3' placeholder='Supplier name' {...register("supplier_name", { required: true, maxLength: 50 })} />
-                    <textarea className='mb-3' placeholder='Sort description' {...register("sort_description")} />
-                    <input className='mb-3' placeholder='Price' type="number" {...register("price")} />
-                    <input className='mb-3' placeholder='Quantity' type="number" {...register("quantity")} />
-                    <input className='mb-3' placeholder='Medicine photo url link' type="text" {...register("picture")} />
-                    <input className='mb-3 w-50 mx-auto btn-submitform' placeholder='' type="submit" value="Add New Medicine" />
+                    <textarea className='mb-3' placeholder='Sort description' {...register("sort_description", { required: true })} />
+                    <input className='mb-3' placeholder='Price' type="number" {...register("price", { required: true })} />
+                    <input className='mb-3' placeholder='Quantity' type="number" {...register("quantity", { required: true })} />
+                    <input className='mb-3' placeholder='Medicine photo url link' type="text" {...register("picture", { required: true })} />
+                    <input className='mb-3 btn-submitform' placeholder='' type="submit" value="Add New Medicine" />
                 </form>
             </div>
             <Toaster />
