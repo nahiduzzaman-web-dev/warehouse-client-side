@@ -22,8 +22,8 @@ const MyItems = () => {
             .then(json => {
                 setMedicines(json);
                 console.log(setMedicines(json));
-
             })
+            .catch((err) => console.log(err));
     }, []);
 
     const handleDelete = id => {

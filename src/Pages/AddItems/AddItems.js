@@ -10,13 +10,14 @@ const AddItems = () => {
     const [user] = useAuthState(auth);
 
     const onSubmit = data => {
-        const url = `http://localhost:5000/medicine/`;
+        const newData = { ...data, email: user.email }
+        const url = `http://localhost:5000/medicine`;
         fetch(url, {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(data)
+            body: JSON.stringify(newData)
         })
             .then(res => res.json())
             .then(result => {
@@ -26,7 +27,9 @@ const AddItems = () => {
                 }
             })
 
-        toast.success('Add your Item. Success!', {
+            .catch((err) => console.log(err));
+
+        toast.success('Add your Item. Successfully!', {
             style: {
                 border: '2px solid lightblue',
                 padding: '5px 20px',
